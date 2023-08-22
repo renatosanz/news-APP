@@ -1,0 +1,29 @@
+/* CSS */
+:root { font-family: 'Inter', sans-serif; }
+@supports (font-variation-settings: normal) {
+  :root { font-family: 'Inter var', sans-serif; }
+}
+
+#body-content{
+  font-family: 'Inter var';
+  flex-direction: column;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background: #fff;
+}
+
+#page-content{
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  width: 1200px;
+  margin: auto;
+  margin-top: 60px;
+}
+
+@media screen and (max-width:1280px){
+  #page-content{
+    width: 90%;
+  }
+}
