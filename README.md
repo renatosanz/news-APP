@@ -14,3 +14,4 @@ Currently, two official plugins are available:
 # news-APP
 # news-APP
 # news-APP
+# news-APP
