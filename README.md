@@ -12,3 +12,4 @@ Currently, two official plugins are available:
 # news_app
 # news-APP
 # news-APP
+# news-APP
