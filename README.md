@@ -10,3 +10,4 @@ Currently, two official plugins are available:
 # news_app
 # news_app
 # news_app
+# news-APP
