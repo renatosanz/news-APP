@@ -3,7 +3,7 @@ import "./Homepage.css"
 import { motion } from 'framer-motion';
 import UserState from './UserState';
 
-export default function Navbar({linkList}) {
+export default function Navbar({linkList,fun}) {
   
   const [toggleClass,setToggleClass] = useState('links_PopUp')
   const [isToggle, setIsToggle] = useState(false);
@@ -37,7 +37,11 @@ export default function Navbar({linkList}) {
           <UserState/>
           <div id='links' style={{gridTemplateColumns:numberColumns(linkList.length)}}>
           {
-            linkList.map((item) => <motion.div transition={{duration:0.1}} className='link' whileHover={{borderBottom:"solid 2px "+item.color} }>
+            linkList.map((item) => <motion.div 
+            onClick={()=>fun(item.id)} 
+            transition={{duration:0.1}} 
+            className='link' 
+            whileHover={{borderBottom:"solid 2px "+item.color} }>
               {item.title}   
             </motion.div>)
           }
@@ -49,7 +53,8 @@ export default function Navbar({linkList}) {
             <h2 style={{margin:'auto'}}>Secciones</h2>
             <div id={'mobileGridLinks'}>
               {
-                linkList.map((item) => <motion.div 
+                linkList.map((item) => <motion.div
+                onClick={()=>fun(item.id)} 
                 style={{backgroundColor:item.color+"80", fontSize:'1rem'}}
                 transition={{duration:0}}
                 className='link' 
@@ -57,6 +62,9 @@ export default function Navbar({linkList}) {
                   {item.title}
                 </motion.div>)
               }
+              <div id='toggleDarkMode'>
+                <button>DarkMode</button>
+              </div>
             </div>
           </div>
         </div>

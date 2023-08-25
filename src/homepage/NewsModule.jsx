@@ -7,7 +7,6 @@ export default function NewsModule({newOfTheDay,news}) {
     <div id={"NewsModule"}>
       <div id="newOfTheDay">
         <TopNews title={newOfTheDay.title} 
-          topic={newOfTheDay.author} 
           image={newOfTheDay.urlToImage}
           linkSource={newOfTheDay.url}
         />
@@ -16,7 +15,6 @@ export default function NewsModule({newOfTheDay,news}) {
         {
           news?.map((item) =><TopNews 
           title={item.title} 
-          topic={item.author}
           image={item.urlToImage}
           linkSource={item.url}
           />)

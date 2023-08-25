@@ -8,7 +8,7 @@ export default function UserState() {
     <div id='user-icon'>
       ⌘
     </div>
-    <h3 style={{margin:'auto'}}>Sign Up</h3>      
+    <h3 style={{margin:'auto auto auto 0'}}>Sign Up</h3>      
   </motion.div>
   )
 }
