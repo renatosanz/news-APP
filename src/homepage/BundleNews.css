@@ -1,12 +1,12 @@
 .BundleNews{
   width: 100%;
-  margin: 1rem auto 0;
 }
 .BundleCards{
+  margin: auto;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
   height: 80%;
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  grid-gap: 1rem;
 }
 .titleTopic{
   height: 20%;
@@ -18,49 +18,69 @@
   display: flex;
   flex-direction: column;
 }
+.bg_NewsCard{
+  width: 18rem;
+  background: #f0f0f0;
+  border-radius: 0.5rem;
+}
+.cont_NewsCard{
+  margin: 1rem;
+}
+.cont_img{
+  border-radius: 0.5rem;
+  background: #d1d1d1;
+}
 .img_NewsCard{
-  width: 100%;
-  height: 15rem;
+  height: 10rem;
+  border-radius: 0.5rem 0.5rem 0 0;
   background-size: cover;
   background-position: center center;
 }
-.footer_NewsCard *{
-  margin: 0.5rem 0;
+.byline{
+  padding: 0.5rem;
+  display: flex;
 }
 .footer_NewsCard{
   display:flex;
   flex-direction:column;
 }
 .keywordsSection{
-  display: none;
+  gap: 10px;
+  padding: 10px 0 0 0 ;
+  flex-wrap: wrap;
+  display: flex;
+}
+.keywordsSpan{
+  border-radius: 0.5rem;
+  background: #d1d1d1;
+  padding: 10px;
 }
 
 @media screen and (max-width:900px) {
   .keywordsSpan{
-    border-radius: 1rem;
+    border-radius: 0.5rem;
     background: #d1d1d1;
     padding: 10px;
   }
   .keywordsSection{
     gap: 10px;
     padding: 10px 0 0 0 ;
+    flex-wrap: wrap;
     display: flex;
   }
   .BundleNews{
     height: auto;
     width: 100%;
-    margin: 1rem auto 0;
-  }
-  .BundleCards{
-    grid-gap: 0;
   }
   .NewsCard{
+    width: 100%;
     display: grid;
     grid-template-rows: 1fr ;
+    margin: auto;
     margin-bottom: 0.75rem;
-    
   }
-  .cont_NewsCard{
+  .bg_NewsCard{
+    width: 100%;
     border-bottom: solid 1px #d3d3d3;
     padding-bottom: 0.75rem;
   }
@@ -69,20 +89,18 @@
     flex-direction: column;
   }
   .footer_NewsCard h3{
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
   .footer_NewsCard p{
-    display: none;
+    margin-top: 0.5rem;
   }
   .footer_NewsCard *{
     align-items: center;
     margin: 0 ;
   }
   .img_NewsCard{
-    display: none;
+    height: 20rem;
+    margin-bottom: 0.5rem;
   }
-  .BundleCards{
-    grid-template-rows: repeat(3,1fr);
-    grid-template-columns: 1fr;
-  }
+
 }

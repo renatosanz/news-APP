@@ -17,12 +17,11 @@ export default function BundleNews({topic,topicColor,items}) {
       <div className='BundleCards'>
         {
           items?.map((item)=>
-            <NewsCard 
-            title={item.title} 
-            resume={item.description} 
-            topic={item.source.name}
-            image={item.urlToImage}
-            linkSource={item.url}/>
+            <NewsCard title={item.headline.main} 
+            image={item.multimedia[0].url} 
+            url={item.web_url} 
+            keywords={item.keywords}
+            section={item.section_name}/>
           )
         }
       </div>

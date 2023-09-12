@@ -34,7 +34,6 @@ export default function Navbar({linkList,fun}) {
           <div id='logo'>
             <h3>APP NEWS</h3>
           </div>
-          <UserState/>
           <div id='links' style={{gridTemplateColumns:numberColumns(linkList.length)}}>
           {
             linkList.map((item) => <motion.div 

@@ -6,18 +6,11 @@ export default function NewsModule({newOfTheDay,news}) {
   return (
     <div id={"NewsModule"}>
       <div id="newOfTheDay">
-        <TopNews title={newOfTheDay.title} 
-          image={newOfTheDay.urlToImage}
-          linkSource={newOfTheDay.url}
-        />
+        <TopNews  item={newOfTheDay} title={newOfTheDay.headline.main} image={ newOfTheDay.multimedia[0].url}/>
       </div>
       <div id="secundaryNews">
         {
-          news?.map((item) =><TopNews 
-          title={item.title} 
-          image={item.urlToImage}
-          linkSource={item.url}
-          />)
+          news?.map((item) =><TopNews item={item} title={item.headline.main} image={ item.multimedia[0].url}/>)
         }
       </div>
     </div>
