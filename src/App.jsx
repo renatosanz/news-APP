@@ -6,7 +6,6 @@ import WelcomeLabel from './homepage/WelcomeLabel';
 import BundleNews from './homepage/BundleNews';
 
 function App() {
-  const API_KEY = "E0ulZbTDipwXonkt2m2KfIQujvKAkjrD"
   const data = {
     "status": "OK",
     "copyright": "Copyright (c) 2023 The New York Times Company. All Rights Reserved.",
@@ -10308,7 +10307,7 @@ function App() {
 
   //const [mainData,setMainData] = useState(null)
   const getMainNews = () =>{
-    fetch("https://api.nytimes.com/svc/search/v2/articlesearch.json?q=news&api-key="+API_KEY+"&sort=newest&fl=web_url,multimedia,headline,section_name,keywords&page=0")
+    fetch("https://api.nytimes.com/svc/search/v2/articlesearch.json?q=news&api-key=APIKEY&sort=newest&fl=web_url,multimedia,headline,section_name,keywords&page=0")
     .then(res => res.json())
     .then(dataJSON => {
       setMainData(dataJSON.response.docs)
